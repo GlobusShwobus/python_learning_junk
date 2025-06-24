@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>17629afc-ac36-420d-bfc9-808f7fd907fa</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>setting_server.py</StartupFile>
+    <StartupFile>main.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -21,7 +21,24 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="setting_server.py" />
+    <Compile Include="main.py" />
+    <Compile Include="website\auth.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="website\models.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="website\views.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="website\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="website\" />
+    <Folder Include="website\templates\" />
+    <Folder Include="website\static\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
